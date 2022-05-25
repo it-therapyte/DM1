@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-cd doc/auto-generation-scripts && make
+cd doc-generation-scripts && make
