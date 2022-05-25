@@ -5,3 +5,6 @@ npm-debug.log
 .env
 .DS_Store
 
+# doc generation
+*.linkcheck.md
+
