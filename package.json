@@ -4,11 +4,13 @@
   "description": "Core data sctuctures described in JSON Schema format",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alexander Kremenets",
   "license": "Unlicense",
   "devDependencies": {
+    "husky": "^8.0.1",
     "merge-markdown": "^0.2.1"
   }
 }
