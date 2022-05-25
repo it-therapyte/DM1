@@ -1,0 +1,14 @@
+{
+  "name": "dm-core-data-structures",
+  "version": "1.0.0",
+  "description": "Core data sctuctures described in JSON Schema format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Kremenets",
+  "license": "Unlicense",
+  "devDependencies": {
+    "merge-markdown": "^0.2.1"
+  }
+}

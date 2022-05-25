@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://dm-matrix.com/medical-tests",
+  "description": "Medical tests",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/test"
+  },
+  "$defs": {
+    "test": {
+      "type": "object",
+      "properties": {
+        "patient-id": {
+          "$ref": "../_common-types.json#/$defs/patient-id"
+        },
+        "visit-id": {
+          "$ref": "../_common-types.json#/$defs/visit-id"
+        }
+      }
+    }
+  }
+}

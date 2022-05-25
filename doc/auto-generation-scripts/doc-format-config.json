@@ -1,0 +1,20 @@
+{
+    "minify": true,
+    "description_is_markdown": true,
+    "expand_buttons": true,
+    "show_breadcrumbs": false,
+    "collapse_long_descriptions": false,
+    "link_to_reused_ref": true,
+    "default_from_description": true,
+    "template_name": "md",
+    "show_toc": false,
+    "examples_as_yaml": false,
+    "markdown_options": {},
+    "template_md_options": {
+      "badge_as_image": true,
+      "show_heading_numbers": false,
+      "show_array_restrictions": false
+    },
+    "with_footer": false,
+    "footer_show_time": true
+  }

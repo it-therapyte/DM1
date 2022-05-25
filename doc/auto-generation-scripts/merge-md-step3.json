@@ -1,0 +1,7 @@
+{
+  "input": {
+    "tmp/Readme.md": ""
+  },
+  "output": "../Readme.md",
+  "TOC": "#### Содержание"
+}

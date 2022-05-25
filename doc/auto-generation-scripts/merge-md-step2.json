@@ -1,0 +1,7 @@
+{
+  "input": {
+    "_Readme.md": "",
+    "tmp/tmp.md": ""
+  },
+  "output": "tmp/Readme.md"
+}
