@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "http://dm-matrix.com/diagnosis",
-  "description": "Diagnosis ss test asdf asdf asdf",
+  "description": "Диагнозы",
   "title": "diagnosis.csv",
   "type": "object",
   "properties": {
@@ -13,19 +13,19 @@
       "$ref": "../_common-types.json#/$defs/visit-id",
       "title": "ID визита"
     },
-    "diagnosis-code": {
+    "code": {
       "type": "string",
       "title": "Код по МКБ-10"
     },
-    "diagnosis-type": {
+    "type": {
       "enum": ["основной", "сопутствующий", "осложнение основного"],
       "title": "Тип диагноза"
     },
-    "diagnosis-date": {
+    "date": {
       "type": "string",
       "title": "Дата постановки диагноза",
       "format": "date"
     }
   },
-  "required": ["patient-id", "visit-id", "diagnosis-code", "diagnosis-type", "diagnosis-date"]
+  "required": ["patient-id", "visit-id", "code", "date"]
 }

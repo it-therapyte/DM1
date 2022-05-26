@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "http://dm-matrix.com/patient",
-  "description": "Patient demographic information",
+  "description": "Демографические данные",
   "title": "patients.csv",
   "type": "object",
   "properties": {
@@ -11,12 +11,12 @@
     },
     "gender": {
       "title:": "Пол",
-      "enum": ["мужской", "женский"]
+      "enum": ["м", "ж"]
     },
-    "age": {
-      "$ref": "../_common-types.json#/$defs/age",
-      "title": "Возраст"
+    "year-of-birth": {
+      "$ref": "../_common-types.json#/$defs/year-of-birth",
+      "title": "Год рождения"
     }
   },
-  "required": ["patient-id", "gender", "age"]
+  "required": ["patient-id", "gender", "year-of-birth"]
 }

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "http://dm-matrix.com/medical-test",
-  "description": "Medical test",
+  "description": "Лабораторные данные",
   "title": "medical-tests.csv",
   "type": "object",
   "properties": {
@@ -25,15 +25,19 @@
       "type": "string",
       "title": "Код по справочнику"
     },
+    "text-result": {
+      "type": "string",
+      "title": "Результат текстовый"
+    },
     "value": {
       "type": "number",
       "title": "Результат числовой"
     },
-    "test-date": {
+    "date": {
       "type": "string",
       "title": "Дата проведения анализа",
       "format": "date"
     }
   },
-  "required": ["patient-id", "visit-id", "test-name", "test-parameter", "test-code", "value", "test-date"]
+  "required": ["patient-id", "visit-id", "test-name", "test-parameter", "test-code", "value", "date"]
 }

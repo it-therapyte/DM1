@@ -4,12 +4,12 @@
   "test": "test text",
 
   "$defs": {
-    "age": {
+    "year-of-birth": {
       "type": "number",
       "minimum": 0
     },
     "patient-id": {
-      "type": "number",
+      "type": "string",
       "title": "ID пациента"
     },
     "visit-id": {

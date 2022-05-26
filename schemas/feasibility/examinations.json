@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "http://dm-matrix.com/examinations",
+  "description": "Обследования",
+  "title": "examinations.csv",
+  "type": "object",
+  "properties": {
+    "patient-id": {
+      "$ref": "../_common-types.json#/$defs/patient-id",
+      "title": "ID пациента"
+    },
+    "visit-id": {
+      "$ref": "../_common-types.json#/$defs/visit-id",
+      "title": "ID визита"
+    },
+    "name": {
+      "type": "string",
+      "title": "Наименование обследования"
+    },
+    "result": {
+      "type": "string",
+      "title": "Результат текстовый"
+    },
+    "date": {
+      "type": "string",
+      "title": "Дата обследования",
+      "format": "date"
+    }
+  },
+  "required": ["patient-id", "visit-id", "name", "date"]
+}
