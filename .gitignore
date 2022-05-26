@@ -8,3 +8,5 @@ npm-debug.log
 # doc generation
 *.linkcheck.md
 
+# editors
+.vscode

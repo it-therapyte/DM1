@@ -2,21 +2,15 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "http://dm-matrix.com/diagnosis",
   "description": "Diagnosis",
-  "type": "array",
-  "items": {
-    "$ref": "#/$defs/diagnosis"
-  },
-  "$defs": {
-    "diagnosis": {
-      "type": "object",
-      "properties": {
-        "patient-id": {
-          "$ref": "../_common-types.json#/$defs/patient-id"
-        },
-        "visit-id": {
-          "$ref": "../_common-types.json#/$defs/visit-id"
-        }
-      }
+  "title": "diagnosis.csv",
+  "type": "object",
+  "properties": {
+    "patient-id": {
+      "$ref": "../_common-types.json#/$defs/patient-id"
+    },
+    "visit-id": {
+      "$ref": "../_common-types.json#/$defs/visit-id"
     }
-  }
+  },
+  "required": ["patient-id", "visit-id"]
 }

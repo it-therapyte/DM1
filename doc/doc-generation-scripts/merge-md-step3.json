@@ -3,5 +3,5 @@
     "tmp/Readme.md": ""
   },
   "output": "../Readme.md",
-  "TOC": "#### Содержание"
+  "TOC": "## Содержание"
 }
