@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-cd doc/doc-generation-scripts && make
+cd doc/doc-generation-scripts && make && cd -
+git add ./doc/Readme.md

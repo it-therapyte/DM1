@@ -10,9 +10,17 @@
 - [diagnosis.csv](#diagnosiscsv)
   - [<a name="patient-id"></a>* Property `patient-id`](#a-namepatient-ida-property-patient-id)
   - [<a name="visit-id"></a>* Property `visit-id`](#a-namevisit-ida-property-visit-id)
+  - [<a name="diagnosis-code"></a>* Property `diagnosis-code`](#a-namediagnosis-codea-property-diagnosis-code)
+  - [<a name="diagnosis-type"></a>* Property `diagnosis-type`](#a-namediagnosis-typea-property-diagnosis-type)
+  - [<a name="diagnosis-date"></a>* Property `diagnosis-date`](#a-namediagnosis-datea-property-diagnosis-date)
 - [medical-tests.csv](#medical-testscsv)
   - [<a name="patient-id"></a>* Property `patient-id`](#a-namepatient-ida-property-patient-id-1)
   - [<a name="visit-id"></a>* Property `visit-id`](#a-namevisit-ida-property-visit-id-1)
+  - [<a name="test-name"></a>* Property `test-name`](#a-nametest-namea-property-test-name)
+  - [<a name="test-parameter"></a>* Property `test-parameter`](#a-nametest-parametera-property-test-parameter)
+  - [<a name="test-code"></a>* Property `test-code`](#a-nametest-codea-property-test-code)
+  - [<a name="value"></a>* Property `value`](#a-namevaluea-property-value)
+  - [<a name="test-date"></a>* Property `test-date`](#a-nametest-datea-property-test-date)
 - [patients.csv](#patientscsv)
   - [<a name="patient-id"></a>* Property `patient-id`](#a-namepatient-ida-property-patient-id-2)
   - [<a name="gender"></a>* Property `gender`](#a-namegendera-property-gender)
@@ -20,6 +28,7 @@
 - [therapy.csv](#therapycsv)
   - [<a name="patient-id"></a>* Property `patient-id`](#a-namepatient-ida-property-patient-id-3)
   - [<a name="visit-id"></a>* Property `visit-id`](#a-namevisit-ida-property-visit-id-2)
+  - [<a name="drug-name"></a>* Property `drug-name`](#a-namedrug-namea-property-drug-name)
 - [visits.csv](#visitscsv)
   - [<a name="patient-id"></a>* Property `patient-id`](#a-namepatient-ida-property-patient-id-4)
   - [<a name="visit-id"></a>* Property `visit-id`](#a-namevisit-ida-property-visit-id-3)
@@ -57,15 +66,20 @@
 | **Additional properties** | [![badge](https://img.shields.io/badge/Any+type-allowed-green)](# "Additional Properties of any type are allowed.") |
 |                           |                                                                                                                     |
 
-**Description:** Diagnosis
+**Description:** Diagnosis ss test asdf asdf asdf
 
-| Property                     | Pattern | Type   | Deprecated | Definition                                 | Title/Description |
-| ---------------------------- | ------- | ------ | ---------- | ------------------------------------------ | ----------------- |
-| + [patient-id](#patient-id ) | No      | number | No         | In ../_common-types.json#/$defs/patient-id | -                 |
-| + [visit-id](#visit-id )     | No      | string | No         | In ../_common-types.json#/$defs/visit-id   | -                 |
-|                              |         |        |            |                                            |                   |
+| Property                             | Pattern | Type             | Deprecated | Definition                                 | Title/Description        |
+| ------------------------------------ | ------- | ---------------- | ---------- | ------------------------------------------ | ------------------------ |
+| + [patient-id](#patient-id )         | No      | number           | No         | In ../_common-types.json#/$defs/patient-id | ID пациента              |
+| + [visit-id](#visit-id )             | No      | string           | No         | In ../_common-types.json#/$defs/visit-id   | ID визита                |
+| + [diagnosis-code](#diagnosis-code ) | No      | string           | No         | -                                          | Код по МКБ-10            |
+| + [diagnosis-type](#diagnosis-type ) | No      | enum (of string) | No         | -                                          | Тип диагноза             |
+| + [diagnosis-date](#diagnosis-date ) | No      | string           | No         | -                                          | Дата постановки диагноза |
+|                                      |         |                  |            |                                            |                          |
 
 ## <a name="patient-id"></a>![badge](https://img.shields.io/badge/Required-blue) Property `patient-id`
+
+**Title:** ID пациента
 
 | Type           | `number`                                |
 | -------------- | --------------------------------------- |
@@ -74,10 +88,41 @@
 
 ## <a name="visit-id"></a>![badge](https://img.shields.io/badge/Required-blue) Property `visit-id`
 
+**Title:** ID визита
+
 | Type           | `string`                              |
 | -------------- | ------------------------------------- |
 | **Defined in** | ../_common-types.json#/$defs/visit-id |
 |                |                                       |
+
+## <a name="diagnosis-code"></a>![badge](https://img.shields.io/badge/Required-blue) Property `diagnosis-code`
+
+**Title:** Код по МКБ-10
+
+| Type | `string` |
+| ---- | -------- |
+|      |          |
+
+## <a name="diagnosis-type"></a>![badge](https://img.shields.io/badge/Required-blue) Property `diagnosis-type`
+
+**Title:** Тип диагноза
+
+| Type | `enum (of string)` |
+| ---- | ------------------ |
+|      |                    |
+
+Must be one of:
+* "основной"
+* "сопутствующий"
+* "осложнение основного"
+
+## <a name="diagnosis-date"></a>![badge](https://img.shields.io/badge/Required-blue) Property `diagnosis-date`
+
+**Title:** Дата постановки диагноза
+
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -92,13 +137,20 @@
 
 **Description:** Medical test
 
-| Property                     | Pattern | Type   | Deprecated | Definition                                 | Title/Description |
-| ---------------------------- | ------- | ------ | ---------- | ------------------------------------------ | ----------------- |
-| + [patient-id](#patient-id ) | No      | number | No         | In ../_common-types.json#/$defs/patient-id | -                 |
-| + [visit-id](#visit-id )     | No      | string | No         | In ../_common-types.json#/$defs/visit-id   | -                 |
-|                              |         |        |            |                                            |                   |
+| Property                             | Pattern | Type   | Deprecated | Definition                                 | Title/Description       |
+| ------------------------------------ | ------- | ------ | ---------- | ------------------------------------------ | ----------------------- |
+| + [patient-id](#patient-id )         | No      | number | No         | In ../_common-types.json#/$defs/patient-id | ID пациента             |
+| + [visit-id](#visit-id )             | No      | string | No         | In ../_common-types.json#/$defs/visit-id   | ID визита               |
+| + [test-name](#test-name )           | No      | string | No         | -                                          | Наименование анализа    |
+| + [test-parameter](#test-parameter ) | No      | string | No         | -                                          | Параметр в анализе      |
+| + [test-code](#test-code )           | No      | string | No         | -                                          | Код по справочнику      |
+| + [value](#value )                   | No      | number | No         | -                                          | Результат числовой      |
+| + [test-date](#test-date )           | No      | string | No         | -                                          | Дата проведения анализа |
+|                                      |         |        |            |                                            |                         |
 
 ## <a name="patient-id"></a>![badge](https://img.shields.io/badge/Required-blue) Property `patient-id`
+
+**Title:** ID пациента
 
 | Type           | `number`                                |
 | -------------- | --------------------------------------- |
@@ -107,10 +159,52 @@
 
 ## <a name="visit-id"></a>![badge](https://img.shields.io/badge/Required-blue) Property `visit-id`
 
+**Title:** ID визита
+
 | Type           | `string`                              |
 | -------------- | ------------------------------------- |
 | **Defined in** | ../_common-types.json#/$defs/visit-id |
 |                |                                       |
+
+## <a name="test-name"></a>![badge](https://img.shields.io/badge/Required-blue) Property `test-name`
+
+**Title:** Наименование анализа
+
+| Type | `string` |
+| ---- | -------- |
+|      |          |
+
+## <a name="test-parameter"></a>![badge](https://img.shields.io/badge/Required-blue) Property `test-parameter`
+
+**Title:** Параметр в анализе
+
+| Type | `string` |
+| ---- | -------- |
+|      |          |
+
+## <a name="test-code"></a>![badge](https://img.shields.io/badge/Required-blue) Property `test-code`
+
+**Title:** Код по справочнику
+
+| Type | `string` |
+| ---- | -------- |
+|      |          |
+
+## <a name="value"></a>![badge](https://img.shields.io/badge/Required-blue) Property `value`
+
+**Title:** Результат числовой
+
+| Type | `number` |
+| ---- | -------- |
+|      |          |
+
+## <a name="test-date"></a>![badge](https://img.shields.io/badge/Required-blue) Property `test-date`
+
+**Title:** Дата проведения анализа
+
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -127,12 +221,14 @@
 
 | Property                     | Pattern | Type             | Deprecated | Definition                                 | Title/Description |
 | ---------------------------- | ------- | ---------------- | ---------- | ------------------------------------------ | ----------------- |
-| + [patient-id](#patient-id ) | No      | number           | No         | In ../_common-types.json#/$defs/patient-id | -                 |
+| + [patient-id](#patient-id ) | No      | number           | No         | In ../_common-types.json#/$defs/patient-id | ID пациента       |
 | + [gender](#gender )         | No      | enum (of string) | No         | -                                          | -                 |
-| + [age](#age )               | No      | number           | No         | In ../_common-types.json#/$defs/age        | -                 |
+| + [age](#age )               | No      | number           | No         | In ../_common-types.json#/$defs/age        | Возраст           |
 |                              |         |                  |            |                                            |                   |
 
 ## <a name="patient-id"></a>![badge](https://img.shields.io/badge/Required-blue) Property `patient-id`
+
+**Title:** ID пациента
 
 | Type           | `number`                                |
 | -------------- | --------------------------------------- |
@@ -150,6 +246,8 @@ Must be one of:
 * "женский"
 
 ## <a name="age"></a>![badge](https://img.shields.io/badge/Required-blue) Property `age`
+
+**Title:** Возраст
 
 | Type           | `number`                         |
 | -------------- | -------------------------------- |
@@ -174,13 +272,16 @@ Must be one of:
 
 **Description:** Drug therapy
 
-| Property                     | Pattern | Type   | Deprecated | Definition                                 | Title/Description |
-| ---------------------------- | ------- | ------ | ---------- | ------------------------------------------ | ----------------- |
-| + [patient-id](#patient-id ) | No      | number | No         | In ../_common-types.json#/$defs/patient-id | -                 |
-| + [visit-id](#visit-id )     | No      | string | No         | In ../_common-types.json#/$defs/visit-id   | -                 |
-|                              |         |        |            |                                            |                   |
+| Property                     | Pattern | Type   | Deprecated | Definition                                 | Title/Description      |
+| ---------------------------- | ------- | ------ | ---------- | ------------------------------------------ | ---------------------- |
+| + [patient-id](#patient-id ) | No      | number | No         | In ../_common-types.json#/$defs/patient-id | ID пациента            |
+| + [visit-id](#visit-id )     | No      | string | No         | In ../_common-types.json#/$defs/visit-id   | ID визита              |
+| + [drug-name](#drug-name )   | No      | string | No         | -                                          | Наименование препарата |
+|                              |         |        |            |                                            |                        |
 
 ## <a name="patient-id"></a>![badge](https://img.shields.io/badge/Required-blue) Property `patient-id`
+
+**Title:** ID пациента
 
 | Type           | `number`                                |
 | -------------- | --------------------------------------- |
@@ -189,10 +290,20 @@ Must be one of:
 
 ## <a name="visit-id"></a>![badge](https://img.shields.io/badge/Required-blue) Property `visit-id`
 
+**Title:** ID визита
+
 | Type           | `string`                              |
 | -------------- | ------------------------------------- |
 | **Defined in** | ../_common-types.json#/$defs/visit-id |
 |                |                                       |
+
+## <a name="drug-name"></a>![badge](https://img.shields.io/badge/Required-blue) Property `drug-name`
+
+**Title:** Наименование препарата
+
+| Type | `string` |
+| ---- | -------- |
+|      |          |
 
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -209,12 +320,14 @@ Must be one of:
 
 | Property                     | Pattern | Type   | Deprecated | Definition                                 | Title/Description |
 | ---------------------------- | ------- | ------ | ---------- | ------------------------------------------ | ----------------- |
-| + [patient-id](#patient-id ) | No      | number | No         | In ../_common-types.json#/$defs/patient-id | -                 |
-| + [visit-id](#visit-id )     | No      | string | No         | In ../_common-types.json#/$defs/visit-id   | -                 |
-| + [visit-date](#visit-date ) | No      | string | No         | -                                          | Visit date        |
+| + [patient-id](#patient-id ) | No      | number | No         | In ../_common-types.json#/$defs/patient-id | ID пациента       |
+| + [visit-id](#visit-id )     | No      | string | No         | In ../_common-types.json#/$defs/visit-id   | ID визита         |
+| + [visit-date](#visit-date ) | No      | string | No         | -                                          | Дата визита       |
 |                              |         |        |            |                                            |                   |
 
 ## <a name="patient-id"></a>![badge](https://img.shields.io/badge/Required-blue) Property `patient-id`
+
+**Title:** ID пациента
 
 | Type           | `number`                                |
 | -------------- | --------------------------------------- |
@@ -223,6 +336,8 @@ Must be one of:
 
 ## <a name="visit-id"></a>![badge](https://img.shields.io/badge/Required-blue) Property `visit-id`
 
+**Title:** ID визита
+
 | Type           | `string`                              |
 | -------------- | ------------------------------------- |
 | **Defined in** | ../_common-types.json#/$defs/visit-id |
@@ -230,7 +345,7 @@ Must be one of:
 
 ## <a name="visit-date"></a>![badge](https://img.shields.io/badge/Required-blue) Property `visit-date`
 
-**Title:** Visit date
+**Title:** Дата визита
 
 | Type | `string` |
 | ---- | -------- |

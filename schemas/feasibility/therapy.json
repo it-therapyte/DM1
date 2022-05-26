@@ -1,16 +1,22 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "http://dm-matrix.com/therapy",
   "description": "Drug therapy",
   "title": "therapy.csv",
   "type": "object",
   "properties": {
     "patient-id": {
-      "$ref": "../_common-types.json#/$defs/patient-id"
+      "$ref": "../_common-types.json#/$defs/patient-id",
+      "title": "ID пациента"
     },
     "visit-id": {
-      "$ref": "../_common-types.json#/$defs/visit-id"
+      "$ref": "../_common-types.json#/$defs/visit-id",
+      "title": "ID визита"
+    },
+    "drug-name": {
+      "type": "string",
+      "title": "Наименование препарата"
     }
   },
-  "required": ["patient-id", "visit-id"]
+  "required": ["patient-id", "visit-id", "drug-name"]
 }
