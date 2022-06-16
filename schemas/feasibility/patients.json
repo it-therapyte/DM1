@@ -16,6 +16,28 @@
     "yearOfBirth": {
       "$ref": "../_common-types.json#/$defs/yearOfBirth",
       "title": "Год рождения"
+    },
+    "menopause": {
+      "title:": "Менопауза",
+      "description": "Только для полной выгрузки, только для женщин",
+      "enum": ["Да", "Нет"]
+    },
+    "menopauseAge": {
+      "title:": "Возраст начала менопаузы",
+      "type": "string",
+      "format": "date",
+      "description": "Только для полной выгрузки, только для женщин"
+    },
+    "deathDate": {
+      "title:": "Дата смерти",
+      "type": "string",
+      "format": "date",
+      "description": "Только для полной выгрузки, Если известно"
+    },
+    "healthCareOrgId": {
+      "title:": "Идентификатор медицинского учреждения",
+      "type": "string",
+      "description": "Только для полной выгрузки"
     }
   },
   "required": ["patientId", "gender", "yearOfBirth"]

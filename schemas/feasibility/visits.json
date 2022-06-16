@@ -15,8 +15,28 @@
     },
     "date": {
       "type": "string",
-      "title": "Дата посещения",
+      "title": "Дата визита",
       "format": "date"
+    },
+    "type": {
+      "title:": "Тип визита",
+      "enum": ["амбулаторный", "госпитализация"],
+      "description": "Только для полной выгрузки"
+    },
+    "region": {
+      "type": "string",
+      "title": "Регион",
+      "description": "Только для полной выгрузки"
+    },
+    "department": {
+      "type": "string",
+      "title": "Наименование отделения",
+      "description": "Только для полной выгрузки"
+    },
+    "spec": {
+      "type": "string",
+      "title": "Специализация врача",
+      "description": "Только для полной выгрузки"
     }
   },
   "required": ["patientId", "visitId", "date"]

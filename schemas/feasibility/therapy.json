@@ -16,6 +16,53 @@
     "prescriptions": {
       "type": "string",
       "title": "Лекарственные назначения"
+    },
+    "medRefCode": {
+      "type": "string",
+      "title": "Код по справочнику",
+      "description": "Только для полной выгрузки"
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date",
+      "title": "Дата начала приёма",
+      "description": "Только для полной выгрузки"
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date",
+      "title": "Дата окончания приёма",
+      "description": "Только для полной выгрузки"
+    },
+    "amount": {
+      "type": "string",
+      "title": "Количество",
+      "description": "Только для полной выгрузки"
+    },
+    "drugForm": {
+      "type": "string",
+      "title": "Форма",
+      "description": "Только для полной выгрузки"
+    },
+    "singleDose": {
+      "type": "string",
+      "title": "Доза на одни приём",
+      "description": "Только для полной выгрузки"
+    },
+    "frequency": {
+      "type": "string",
+      "title": "Частота приёма",
+      "description": "Только для полной выгрузки"
+    },
+    "routeOfAdm": {
+      "type": "string",
+      "title": "Путь введения",
+      "description": "Только для полной выгрузки"
+    },
+    "durationDays": {
+      "type": "string",
+      "title": "Длительность приёмов в днях",
+      "description": "Только для полной выгрузки"
     }
   },
   "required": ["patientId", "visitId", "prescriptions"]

@@ -17,9 +17,19 @@
       "type": "string",
       "title": "Наименование обследования"
     },
+    "medRefCode": {
+      "type": "string",
+      "title": "Код по справочнику",
+      "description": "Только для полной выгрузки"
+    },
     "result": {
       "type": "string",
       "title": "Результат текстовый"
+    },
+    "resultNumerical": {
+      "type": "string",
+      "title": "Результат числовой",
+      "description": "Только для полной выгрузки"
     },
     "date": {
       "type": "string",

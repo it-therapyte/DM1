@@ -33,6 +33,21 @@
       "type": "number",
       "title": "Результат числовой"
     },
+    "units": {
+      "title:": "Единицы измерения результата",
+      "type": "string",
+      "description": "Только для полной выгрузки"
+    },
+    "lowerLimit": {
+      "type": "number",
+      "title": "Нижняя граница нормы",
+      "description": "Только для полной выгрузки"
+    },
+    "upperLimit": {
+      "type": "number",
+      "title": "Верхняя гарница нормы",
+      "description": "Только для полной выгрузки"
+    },
     "date": {
       "type": "string",
       "title": "Дата проведения анализа",
