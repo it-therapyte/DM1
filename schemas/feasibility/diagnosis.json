@@ -5,12 +5,12 @@
   "title": "diagnosis.csv",
   "type": "object",
   "properties": {
-    "patient-id": {
-      "$ref": "../_common-types.json#/$defs/patient-id",
+    "patientId": {
+      "$ref": "../_common-types.json#/$defs/patientId",
       "title": "ID пациента"
     },
-    "visit-id": {
-      "$ref": "../_common-types.json#/$defs/visit-id",
+    "visitId": {
+      "$ref": "../_common-types.json#/$defs/visitId",
       "title": "ID визита"
     },
     "code": {
@@ -27,5 +27,5 @@
       "format": "date"
     }
   },
-  "required": ["patient-id", "visit-id", "code", "date"]
+  "required": ["patientId", "visitId", "code", "date"]
 }

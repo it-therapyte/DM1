@@ -5,27 +5,27 @@
   "title": "medical-tests.csv",
   "type": "object",
   "properties": {
-    "patient-id": {
-      "$ref": "../_common-types.json#/$defs/patient-id",
+    "patientId": {
+      "$ref": "../_common-types.json#/$defs/patientId",
       "title": "ID пациента"
     },
-    "visit-id": {
-      "$ref": "../_common-types.json#/$defs/visit-id",
+    "visitId": {
+      "$ref": "../_common-types.json#/$defs/visitId",
       "title": "ID визита"
     },
-    "test-name": {
+    "testName": {
       "type": "string",
       "title": "Наименование анализа"
     },
-    "test-parameter": {
+    "testParameter": {
       "type": "string",
       "title": "Параметр в анализе"
     },
-    "test-code": {
+    "testCode": {
       "type": "string",
       "title": "Код по справочнику"
     },
-    "text-result": {
+    "textResult": {
       "type": "string",
       "title": "Результат текстовый"
     },
@@ -39,5 +39,5 @@
       "format": "date"
     }
   },
-  "required": ["patient-id", "visit-id", "test-name", "test-parameter", "test-code", "value", "date"]
+  "required": ["patientId", "visitId", "testName", "testParameter", "testCode", "value", "date"]
 }

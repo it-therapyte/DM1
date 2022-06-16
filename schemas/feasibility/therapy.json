@@ -5,12 +5,12 @@
   "title": "therapy.csv",
   "type": "object",
   "properties": {
-    "patient-id": {
-      "$ref": "../_common-types.json#/$defs/patient-id",
+    "patientId": {
+      "$ref": "../_common-types.json#/$defs/patientId",
       "title": "ID пациента"
     },
-    "visit-id": {
-      "$ref": "../_common-types.json#/$defs/visit-id",
+    "visitId": {
+      "$ref": "../_common-types.json#/$defs/visitId",
       "title": "ID визита"
     },
     "prescriptions": {
@@ -18,5 +18,5 @@
       "title": "Лекарственные назначения"
     }
   },
-  "required": ["patient-id", "visit-id", "prescriptions"]
+  "required": ["patientId", "visitId", "prescriptions"]
 }

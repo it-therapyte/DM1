@@ -5,18 +5,18 @@
   "title": "patients.csv",
   "type": "object",
   "properties": {
-    "patient-id": {
-      "$ref": "../_common-types.json#/$defs/patient-id",
+    "patientId": {
+      "$ref": "../_common-types.json#/$defs/patientId",
       "title": "ID пациента"
     },
     "gender": {
       "title:": "Пол",
       "enum": ["м", "ж"]
     },
-    "year-of-birth": {
-      "$ref": "../_common-types.json#/$defs/year-of-birth",
+    "yearOfBirth": {
+      "$ref": "../_common-types.json#/$defs/yearOfBirth",
       "title": "Год рождения"
     }
   },
-  "required": ["patient-id", "gender", "year-of-birth"]
+  "required": ["patientId", "gender", "yearOfBirth"]
 }

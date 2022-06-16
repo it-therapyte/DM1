@@ -4,15 +4,15 @@
   "test": "test text",
 
   "$defs": {
-    "year-of-birth": {
+    "yearOfBirth": {
       "type": "number",
       "minimum": 0
     },
-    "patient-id": {
+    "patientId": {
       "type": "string",
       "title": "ID пациента"
     },
-    "visit-id": {
+    "visitId": {
       "type": "string",
       "title": "ID визита"
     }

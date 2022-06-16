@@ -5,12 +5,12 @@
   "title": "procedures.csv (opt)",
   "type": "object",
   "properties": {
-    "patient-id": {
-      "$ref": "../_common-types.json#/$defs/patient-id",
+    "patientId": {
+      "$ref": "../_common-types.json#/$defs/patientId",
       "title": "ID пациента"
     },
-    "visit-id": {
-      "$ref": "../_common-types.json#/$defs/visit-id",
+    "visitId": {
+      "$ref": "../_common-types.json#/$defs/visitId",
       "title": "ID визита"
     },
     "name": {
@@ -23,5 +23,5 @@
       "format": "date"
     }
   },
-  "required": ["patient-id", "visit-id", "name", "date"]
+  "required": ["patientId", "visitId", "name", "date"]
 }
