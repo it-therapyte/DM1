@@ -1,6 +1,6 @@
 {
     "minify": true,
-    "description_is_markdown": true,
+    "description_is_markdown": false,
     "expand_buttons": true,
     "show_breadcrumbs": false,
     "collapse_long_descriptions": false,

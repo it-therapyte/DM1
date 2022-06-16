@@ -3,3 +3,4 @@
 
 cd doc/doc-generation-scripts && make && cd -
 git add ./doc/Readme.md
+git add ./doc/Readme.pdf

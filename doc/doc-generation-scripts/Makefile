@@ -11,5 +11,6 @@ generate:
 	npx merge-markdown -m merge-md-step2.json
 	npx merge-markdown -m merge-md-step3.json
 	rm -rf ./tmp
+	mdpdf ../Readme.md
 
 .PHONY: prepare generate
